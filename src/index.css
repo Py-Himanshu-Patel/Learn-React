@@ -1,3 +1,13 @@
+#root {
+	display: flex;
+}
+
+.card__img{
+	height: 300px;
+	width: auto;
+	margin: 20px;
+}
+
 .card {
-	height: 200px;
+	text-align: center;
 }

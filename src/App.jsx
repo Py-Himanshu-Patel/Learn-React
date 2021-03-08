@@ -1,27 +1,23 @@
 import React from 'react';
 import Card from "./Card";
+import data from "./data";
 
-function App() {
+
+const App = () => {
 	return (
 		<>
-			<Card 
-				imgsrc = "https://picsum.photos/200/300"
-				seriesName = "DARK"
-				seriesTitle = "Netflix Original"
-				link = "https://picsum.photos/"
-			/>
-			<Card 
-				imgsrc = "https://picsum.photos/200/300/?blur"
-				seriesName = "ESCAPE"
-				seriesTitle = "CN Original"
-				link = "https://picsum.photos/"
-			/>
-			<Card 
-				imgsrc = "https://picsum.photos/seed/picsum/200/300"
-				seriesName = "GRAVITY"
-				seriesTitle = "POGO Original"
-				link = "https://picsum.photos/"
-			/>
+			<h1>List of Top 5 series</h1>
+			{data.map( (value) => {
+					return (
+						<Card 
+							key = {value.id}
+							imgsrc = {value.imgsrc}
+							seriesName = {value.seriesName}
+							seriesTitle = {value.seriesTitle}
+							link = {value.link}
+						/>
+					);				
+			} )}
 		</>
 	);	
 }
